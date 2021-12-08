@@ -1,0 +1,91 @@
+@use '../variables.scss' as variables;
+
+.features {
+    margin-top: 20vh;
+
+    .features-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .features-content {
+            width: 33%;
+
+            @media (max-width: variables.$widescreen) {
+                width: 40%;
+            }
+
+            h3 {
+                font-family: 'Playfair Display';
+                color: variables.$blue;
+                font-size: 2.6rem;
+                line-height: 3.4rem;
+                margin: 0 0 40px;
+            }
+
+            p {
+                line-height: 1.8rem;
+                font-weight: 300;
+                color: variables.$blue;
+                margin-bottom: 88px;
+
+                @media (max-width: variables.$widescreen) {
+                    padding-right: 60px;
+                }
+            }
+
+            .btn-row {
+                a {
+                    color: variables.$blue;
+                    text-decoration: none;
+                    font-weight: 600;
+
+                    img {
+                        margin-left: 16px;
+                    }
+                }
+            }
+        }
+
+        .features-list {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding: 0;
+
+                li {
+                    list-style: none;
+
+                    img {
+                        margin-bottom: 24px;
+                    }
+
+                    h5 {
+                        color: variables.$blue;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        margin: 0;
+                    }
+
+                    p {
+                        line-height: 1.8rem;
+                        font-weight: 300;
+                        width: 270px;
+                        margin: 16px 0 72px;
+                        font-size: 1rem;
+                        color: variables.$blue;
+
+                        @media (max-width: variables.$widescreen) {
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
